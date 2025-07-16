@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NursePathway SaaS Marketing Strategy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .mindmap-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            width: 100%;
+            overflow: auto;
+        }
+
+        .mindmap-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .central-node {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 30px 40px;
+            border-radius: 50px;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .branches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .branch {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .branch:hover {
+            transform: translateY(-5px);
+        }
+
+        .branch.content { border-left-color: #3498db; }
+        .branch.seo { border-left-color: #2ecc71; }
+        .branch.social { border-left-color: #e74c3c; }
+        .branch.paid { border-left-color: #f39c12; }
+        .branch.email { border-left-color: #9b59b6; }
+        .branch.partnerships { border-left-color: #1abc9c; }
+        .branch.pr { border-left-color: #e67e22; }
+        .branch.analytics { border-left-color: #34495e; }
+
+        .branch-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .branch-icon {
+            font-size: 1.5em;
+        }
+
+        .branch-items {
+            list-style: none;
+        }
+
+        .branch-items li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .branch-items li:hover {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .branch-items li:last-child {
+            border-bottom: none;
+        }
+
+        .priority {
+            background: #ffe6e6;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .timeline {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .timeline-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .timeline-phases {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .phase {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .phase-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .phase-content {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .mindmap-container {
+                padding: 20px;
+            }
+            
+            .mindmap-title {
+                font-size: 2em;
+            }
+            
+            .central-node {
+                font-size: 1.4em;
+                padding: 20px 30px;
+            }
+            
+            .branches {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mindmap-container">
+        <h1 class="mindmap-title">🚀 NursePathway SaaS Marketing Strategy</h1>
+        
+        <div class="mindmap">
+            <div class="central-node">
+                📊 EXPLODE YOUR SAAS<br>
+                <span style="font-size: 0.7em;">49K+ Monthly Searches → Revenue</span>
+            </div>
+            
+            <div class="branches">
+                <div class="branch content">
+                    <div class="branch-title">
+                        <span class="branch-icon">📝</span>
+                        Content Marketing
+                        <span class="priority">HIGH</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>Blog: "Nurse Immigration Guides" (SEO gold)</li>
+                        <li>Country-specific landing pages</li>
+                        <li>Success story case studies</li>
+                        <li>YouTube: "Immigration Process" videos</li>
+                        <li>Free resources: Checklists, templates</li>
+                        <li>Guest posting on nursing blogs</li>
+                    </ul>
+                </div>
+
+                <div class="branch seo">
+                    <div class="branch-title">
+                        <span class="branch-icon">🔍</span>
+                        SEO Domination
+                        <span class="priority">CRITICAL</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>Target: "nurse immigration [country]"</li>
+                        <li>Long-tail: "IELTS requirements nursing UK"</li>
+                        <li>Local SEO: City-specific pages</li>
+                        <li>Technical SEO optimization</li>
+                        <li>Link building to nursing sites</li>
+                        <li>Schema markup for assessments</li>
+                    </ul>
+                </div>
+
+                <div class="branch social">
+                    <div class="branch-title">
+                        <span class="branch-icon">📱</span>
+                        Social Media
+                        <span class="priority">MEDIUM</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>Facebook: Nurse immigration groups</li>
+                        <li>LinkedIn: Healthcare professional posts</li>
+                        <li>Instagram: Success stories + tips</li>
+                        <li>TikTok: Quick immigration tips</li>
+                        <li>Reddit: r/nursing engagement</li>
+                        <li>Nursing forums participation</li>
+                    </ul>
+                </div>
+
+                <div class="branch paid">
+                    <div class="branch-title">
+                        <span class="branch-icon">💰</span>
+                        Paid Advertising
+                        <span class="priority">HIGH</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>Google Ads: High-intent keywords</li>
+                        <li>Facebook Ads: Nurse demographics</li>
+                        <li>LinkedIn Ads: Healthcare professionals</li>
+                        <li>YouTube Ads: Immigration content</li>
+                        <li>Retargeting campaigns</li>
+                        <li>Lookalike audiences</li>
+                    </ul>
+                </div>
+
+                <div class="branch email">
+                    <div class="branch-title">
+                        <span class="branch-icon">📧</span>
+                        Email Marketing
+                        <span class="priority">HIGH</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>Lead magnet: "Immigration Checklist"</li>
+                        <li>Welcome series for new subscribers</li>
+                        <li>Weekly tips newsletter</li>
+                        <li>Assessment reminder campaigns</li>
+                        <li>Success story features</li>
+                        <li>Webinar promotion sequences</li>
+                    </ul>
+                </div>
+
+                <div class="branch partnerships">
+                    <div class="branch-title">
+                        <span class="branch-icon">🤝</span>
+                        Strategic Partnerships
+                        <span class="priority">MEDIUM</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>Nursing schools partnerships</li>
+                        <li>Immigration lawyers referrals</li>
+                        <li>IELTS prep course affiliates</li>
+                        <li>Healthcare recruiters</li>
+                        <li>Nursing associations</li>
+                        <li>Document verification services</li>
+                    </ul>
+                </div>
+
+                <div class="branch pr">
+                    <div class="branch-title">
+                        <span class="branch-icon">📰</span>
+                        PR & Webinars
+                        <span class="priority">HIGH</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>BigMarker: "Immigration Masterclass"</li>
+                        <li>Podcast guest appearances</li>
+                        <li>Press releases for success stories</li>
+                        <li>Industry conference speaking</li>
+                        <li>Healthcare publication features</li>
+                        <li>Expert commentary on immigration</li>
+                    </ul>
+                </div>
+
+                <div class="branch analytics">
+                    <div class="branch-title">
+                        <span class="branch-icon">📈</span>
+                        Analytics & Optimization
+                        <span class="priority">ONGOING</span>
+                    </div>
+                    <ul class="branch-items">
+                        <li>Conversion tracking setup</li>
+                        <li>A/B testing landing pages</li>
+                        <li>User behavior analysis</li>
+                        <li>ROI measurement by channel</li>
+                        <li>Customer lifetime value</li>
+                        <li>Continuous optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-title">🗓️ Launch Timeline (90 Days to Explosion)</div>
+            <div class="timeline-phases">
+                <div class="phase">
+                    <div class="phase-title">📅 Month 1: Foundation</div>
+                    <div class="phase-content">
+                        • SEO optimization<br>
+                        • Content creation<br>
+                        • Email sequences<br>
+                        • Google Ads launch
+                    </div>
+                </div>
+                <div class="phase">
+                    <div class="phase-title">📅 Month 2: Amplification</div>
+                    <div class="phase-content">
+                        • Social media campaigns<br>
+                        • First webinar<br>
+                        • Partnership outreach<br>
+                        • PR initiatives
+                    </div>
+                </div>
+                <div class="phase">
+                    <div class="phase-title">📅 Month 3: Optimization</div>
+                    <div class="phase-content">
+                        • Data analysis<br>
+                        • A/B testing<br>
+                        • Scale winning channels<br>
+                        • Expand partnerships
+                    </div>
+                </div>
+                <div class="phase">
+                    <div class="phase-title">📅 Month 4+: Scale</div>
+                    <div class="phase-content">
+                        • International expansion<br>
+                        • Advanced features<br>
+                        • Team building<br>
+                        • Exit strategy prep
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
